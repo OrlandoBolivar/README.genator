@@ -1,0 +1,26 @@
+{
+  "name": "readme.generator",
+  "version": "1.0.0",
+  "description": "README.GENERATOR",
+  "main": "README.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OrlandoBolivar/README.genator.git"
+  },
+  "keywords": [
+    "Readme",
+    "generator"
+  ],
+  "author": "Jeison Fajardo Bolivar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/OrlandoBolivar/README.genator/issues"
+  },
+  "homepage": "https://github.com/OrlandoBolivar/README.genator#readme",
+  "dependencies": {
+    "inquirer": "^8.2.4"
+  }
+}
