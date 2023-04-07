@@ -7,37 +7,36 @@ inquirer
     {
         Type: 'input',
         name: 'Description',
-        message: 'what is the description of your project?',
+        message: 'What is the description of your project?',
         default: 'type your answer'
     },
     {
         Type: 'input',
-        name: 'Description',
-        message: 'what is the description of your project?',
+        name: 'Installation-Instructions',
+        message: 'What are the installation instructions',
         default: 'type your answer'
     },
     {
         Type: 'input',
-        name: 'Description',
-        message: 'what is the description of your project?',
+        name: 'usage-information',
+        message: 'What is the usage information?',
         default: 'type your answer'
     },
     {
         Type: 'input',
-        name: 'Description',
-        message: 'what is the description of your project?',
+        name: 'contribution-guidelines',
+        message: 'What were your contribution guidelines?',
         default: 'type your answer'
     },
     {
         Type: 'input',
-        name: 'Description',
-        message: 'what is the description of your project?',
+        name: 'test-instructions',
+        message: 'Insert test instructions',
         default: 'type your answer'
     },
   ])
   .then((data) => {
-    const filename = `README.md`;
-
+    const filename = `README.md`
     fs.writeFile(filename, JSON.stringify(data, null, '\t'), (err) =>
       err ? console.log(err) : console.log('Success!')
     );
