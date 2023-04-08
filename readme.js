@@ -1,32 +1,7 @@
 const inquirer = require('inquirer');
-const fs = require('fs');
-const { dqpb } = require('cli-spinners');
 
-const generateREADME = ({Description, InstallationInstructions, UsageInformation, 
-  ContributionGuidelines, TestInstructions }) =>
-  `# <Your-Project-Title>
-
-  ## Description
-  ${Description}
- 
-  ## Installation
-  ${InstallationInstructions}
-  ## Usage
-  ${UsageInformation}
-  ## Credits
-  
-  ## License
-  
-  ## Badges
-  
-  ## Features
-  
-  ## How to Contribute
-  ${ContributionGuidelines}
-  
-  ## Tests
-  ${TestInstructions}
-  `
+// Node v10+ includes a promises module as an alternative to using callbacks with file system methods.
+const { writeFile } = require('fs').promises;
 
 inquirer
   .prompt([
@@ -62,16 +37,4 @@ inquirer
         default: 'type your answer'
     },
   ])
-  .then((answers) => {
-    const readmeMDcontent= generateREADME(answers);
-
-    fs.writeFile('README.md', readmeMDcontent, (err) =>
-    err ? console.log(err) : console.log('Successfully created README.md!')
-  );
-  });
-
-  // .then((data) => {
-  //   const filename = `README.md`
-  //   fs.writeFile(filename, JSON.stringify(data, null, '\t'), (err) =>
-  //     err ? console.log(err) : console.log('Success!')
-  //   );
+  
